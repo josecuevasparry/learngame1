@@ -23,17 +23,44 @@ export default function useCharacterMovement(speedMultiplier = 1) {
     };
   }, []);
   
-  // Handle game world clicks
-  const handleGameWorldClick = useCallback((e) => {
+  // Handle game world clicks and touches
+  const handleGameWorldClick = useCallback((event) => {
+    // Prevent default behavior
+    event.preventDefault();
+    
+    // Extract coordinates from either mouse or touch event
+    let clientX, clientY;
+    
+    if (event.touches && event.touches.length > 0) {
+      // Touch event
+      clientX = event.touches[0].clientX;
+      clientY = event.touches[0].clientY;
+    } else if (event.changedTouches && event.changedTouches.length > 0) {
+      // Touch end event
+      clientX = event.changedTouches[0].clientX;
+      clientY = event.changedTouches[0].clientY;
+    } else {
+      // Mouse event
+      clientX = event.clientX;
+      clientY = event.clientY;
+    }
+    
+    // Validate coordinates
+    if (typeof clientX !== 'number' || typeof clientY !== 'number' || 
+        isNaN(clientX) || isNaN(clientY)) {
+      console.error('Invalid coordinates:', { clientX, clientY, event });
+      return;
+    }
+    
     // Check if click is within the game world (not on banner)
     const banner = document.querySelector('.top-banner');
     const bannerHeight = banner ? banner.offsetHeight : 70; // Fixed banner height
     
-    if (e.clientY < bannerHeight) {
+    if (clientY < bannerHeight) {
       return; // Don't move if clicking on banner
     }
     
-    setTargetPosition({ x: e.clientX, y: e.clientY });
+    setTargetPosition({ x: clientX, y: clientY });
     setIsMoving(true);
   }, []);
   
@@ -44,6 +71,13 @@ export default function useCharacterMovement(speedMultiplier = 1) {
     const updatePosition = () => {
       if (targetPosition) {
         setCharacterPosition(prev => {
+          // Validate previous position
+          if (typeof prev.x !== 'number' || typeof prev.y !== 'number' || 
+              isNaN(prev.x) || isNaN(prev.y)) {
+            console.warn('Invalid previous position:', prev);
+            return { x: 400, y: 300 }; // Reset to default
+          }
+          
           const dx = targetPosition.x - prev.x;
           const dy = targetPosition.y - prev.y;
           const distance = Math.sqrt(dx * dx + dy * dy);

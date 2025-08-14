@@ -77,6 +77,15 @@ function Game() {
   
   // Update clue discovery and activation based on player proximity
   useEffect(() => {
+    // Validate character position
+    if (typeof characterMovement.characterPosition.x !== 'number' || 
+        typeof characterMovement.characterPosition.y !== 'number' ||
+        isNaN(characterMovement.characterPosition.x) || 
+        isNaN(characterMovement.characterPosition.y)) {
+      console.warn('Invalid character position, skipping discovery check');
+      return;
+    }
+    
     const newDiscoveredClues = [...discoveredClues];
     const newActiveClues = [];
     let nearestClue = null;
@@ -306,7 +315,7 @@ function Game() {
             <div>Answered: {gameLogic.answeredQuestions.length}</div>
             <div>Active: {gameLogic.activeClues.length}</div>
             <div>Nearby: {gameLogic.nearbyClue ? gameLogic.nearbyClue.id : 'None'}</div>
-            <div>Char Pos: ({Math.round(characterMovement.characterPosition.x)}, {Math.round(characterMovement.characterPosition.y)})</div>
+            <div>Char Pos: ({Math.round(characterMovement.characterPosition.x || 0)}, {Math.round(characterMovement.characterPosition.y || 0)})</div>
             <div>Game World: ({gameWorldDimensions.width}x{gameWorldDimensions.height})</div>
           </div>
         )}

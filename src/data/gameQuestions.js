@@ -355,100 +355,100 @@ const gameQuestions = {
       position: { x: 300, y: 400 }
     }
   ]
-
-  // level5: [
-  //   // Questions based on the PDF content
-  //   {
-  //     id: 34,
-  //     type: 'multiple',
-  //     question: 'What is the basic unit of all living organisms?',
-  //     options: ['Tissue', 'Organ', 'Cell', 'System'],
-  //     correct: 2,
-  //     position: { x: 200, y: 200 }
-  //   },
-  //   {
-  //     id: 35,
-  //     type: 'multiple',
-  //     question: 'Which of these is a healthy food for growth and repair?',
-  //     options: ['Candy', 'Protein-rich foods', 'Soda', 'Chips'],
-  //     correct: 1,
-  //     position: { x: 600, y: 300 }
-  //   },
-  //   {
-  //     id: 36,
-  //     type: 'math',
-  //     question: 'If a student reads 15 pages per day, how many pages will they read in 7 days?',
-  //     answer: '105',
-  //     position: { x: 400, y: 500 }
-  //   },
-  //   {
-  //     id: 37,
-  //     type: 'word',
-  //     question: 'What do you call the process of mixing different groups of people and cultures?',
-  //     answer: 'mestizaje',
-  //     position: { x: 300, y: 150 }
-  //   },
-  //   {
-  //     id: 38,
-  //     type: 'multiple',
-  //     question: 'Which instrument is typically used in a music class?',
-  //     options: ['Microscope', 'Test tube', 'Metallophone', 'Bunsen burner'],
-  //     correct: 2,
-  //     position: { x: 700, y: 400 }
-  //   },
-  //   {
-  //     id: 39,
-  //     type: 'multiple',
-  //     question: 'What is an important skill in physical education?',
-  //     options: ['Memorization', 'Motor skills', 'Writing', 'Reading'],
-  //     correct: 1,
-  //     position: { x: 500, y: 250 }
-  //   },
-  //   {
-  //     id: 40,
-  //     type: 'pronunciation',
-  //     question: 'Pronounce: "cell"',
-  //     word: 'cell',
-  //     position: { x: 150, y: 350 }
-  //   },
-  //   {
-  //     id: 41,
-  //     type: 'pronunciation',
-  //     question: 'Pronounce: "Toothbrush",
-  //     word: 'Toothbrush',
-  //     position: { x: 650, y: 200 }
-  //   },
-  //   {
-  //     id: 42,
-  //     type: 'multiple',
-  //     question: 'Which tool would you use to create a presentation?',
-  //     options: ['Hammer', 'Presentation software', 'Toothbrush', 'Screwdriver'],
-  //     correct: 1,
-  //     position: { x: 350, y: 450 }
-  //   },
-  //   {
-  //     id: 43,
-  //     type: 'word',
-  //     question: 'What do you call a structure made from recycled plastic bottles?',
-  //     answer: 'ecoladrillo',
-  //     position: { x: 400, y: 350 }
-  //   },
-  //   {
-  //     id: 44,
-  //     type: 'multiple',
-  //     question: 'Which of these helps develop constructive interpersonal relationships?',
-  //     options: ['Ignoring others', 'Good communication', 'Being rude', 'Talking loudly'],
-  //     correct: 1,
-  //     position: { x: 500, y: 300 }
-  //   },
-  //   {
-  //     id: 45,
-  //     type: 'math',
-  //     question: 'If a rectangular garden is 8 meters long and 4 meters wide, what is its area?',
-  //     answer: '32 square meters',
-  //     position: { x: 300, y: 400 }
-  //   }
-  // ]
+,
+  level5: [
+    // Questions based on the PDF content
+    {
+      id: 34,
+      type: 'multiple',
+      question: 'What is the basic unit of all living organisms?',
+      options: ['Tissue', 'Organ', 'Cell', 'System'],
+      correct: 2,
+      position: { x: 200, y: 200 }
+    },
+    {
+      id: 35,
+      type: 'multiple',
+      question: 'Which of these is a healthy food for growth and repair?',
+      options: ['Candy', 'Protein-rich foods', 'Soda', 'Chips'],
+      correct: 1,
+      position: { x: 600, y: 300 }
+    },
+    {
+      id: 36,
+      type: 'math',
+      question: 'If a student reads 15 pages per day, how many pages will they read in 7 days?',
+      answer: '105',
+      position: { x: 400, y: 500 }
+    },
+    {
+      id: 37,
+      type: 'word',
+      question: 'What do you call the process of mixing different groups of people and cultures?',
+      answer: 'mestizaje',
+      position: { x: 300, y: 150 }
+    },
+    {
+      id: 38,
+      type: 'multiple',
+      question: 'Which instrument is typically used in a music class?',
+      options: ['Microscope', 'Test tube', 'Metallophone', 'Bunsen burner'],
+      correct: 2,
+      position: { x: 700, y: 400 }
+    },
+    {
+      id: 39,
+      type: 'multiple',
+      question: 'What is an important skill in physical education?',
+      options: ['Memorization', 'Motor skills', 'Writing', 'Reading'],
+      correct: 1,
+      position: { x: 500, y: 250 }
+    },
+    {
+      id: 40,
+      type: 'pronunciation',
+      question: 'Pronounce: "cell"',
+      word: 'cell',
+      position: { x: 150, y: 350 }
+    },
+    {
+      id: 41,
+      type: 'pronunciation',
+      question: 'Pronounce: "Toothbrush"',
+      word: 'Toothbrush',
+      position: { x: 650, y: 200 }
+    },
+    {
+      id: 42,
+      type: 'multiple',
+      question: 'Which tool would you use to create a presentation?',
+      options: ['Hammer', 'Presentation software', 'Toothbrush', 'Screwdriver'],
+      correct: 1,
+      position: { x: 350, y: 450 }
+    },
+    {
+      id: 43,
+      type: 'word',
+      question: 'What do you call a structure made from recycled plastic bottles?',
+      answer: 'ecoladrillo',
+      position: { x: 400, y: 350 }
+    },
+    {
+      id: 44,
+      type: 'multiple',
+      question: 'Which of these helps develop constructive interpersonal relationships?',
+      options: ['Ignoring others', 'Good communication', 'Being rude', 'Talking loudly'],
+      correct: 1,
+      position: { x: 500, y: 300 }
+    },
+    {
+      id: 45,
+      type: 'math',
+      question: 'If a rectangular garden is 8 meters long and 4 meters wide, what is its area?',
+      answer: '32 square meters',
+      position: { x: 300, y: 400 }
+    }
+  ]
 };
 
 export default gameQuestions;
